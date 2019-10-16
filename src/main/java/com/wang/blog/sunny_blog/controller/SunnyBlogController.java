@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
  * @create 2019-10-15 23:59
  */
 @Controller
-@RequestMapping("/sunny")
 public class SunnyBlogController {
 
     @GetMapping({"/","","/index"})
@@ -20,5 +19,15 @@ public class SunnyBlogController {
 
 
         return "/index";
+    }
+
+    @GetMapping({"/about"})
+    public String about(HttpServletRequest request){
+        return "/about";
+    }
+
+    @GetMapping({"/detail"})
+    public String detail(HttpServletRequest request){
+        return "/detail";
     }
 }
